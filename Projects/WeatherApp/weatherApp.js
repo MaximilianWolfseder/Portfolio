@@ -31,7 +31,7 @@ document.querySelector(".searchButton").addEventListener("click", function(){
 fetchData("berlin");
 
 document.querySelector('.exit')?.addEventListener('click', (event) =>{
-    window.location.href = '/Portfolio/home.html#Projects';
+    window.location.href = '../../home.html#Projects';
 })
 
 
