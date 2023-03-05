@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 22px;
+}
+
+.textblock{
+    color:#ffffff;
+}
+
+img {
+    
+    border-radius: 4px;
+    margin-top: 50px;
+    padding: 5px;
+    width: 120px;
+  }
+
+.body_1{
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    text-decoration: none;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: #2a2a2a
+    
+
+}
+
+.login{
+    display: flex;
+    margin-top: 20vh;
+
+    text-decoration: none;
+   
+    background-color: #1d1d1d;
+    
+    height: 60%;
+    width: 25%;
+    border-radius: 20px;
+    
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    opacity: 1.0;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_field{
+    
+    display:block;
+    justify-content: center;
+    align-items: center;
+    color: #b6c199;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.inputfield{
+    
+    color: #000000;
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 60%;
+    padding: 14px 20px;
+}
+
+.loginButton{
+    padding: 7px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #4cbfa6;
+    color: aliceblue;
+    width: 330px;
+}
+
+.loginButton:hover{
+    transition: 0.4s;
+    opacity: 0.7;
+}
+
+
+.exit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 7vh;
+    width: 8vw;
+    top: 91.5%;
+    right: 91%;
+    background-color: #292827;
+    border: solid 0.1vh #ffffff;
+    border-radius: 1vh;
+    font-size: 2.5vh;
+    color: #ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.exit:hover{
+    background-color: #4cbfa6;
+}
+
+.popup{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 10vh;
+    width: 10vw;
+    top: 30%;
+    right: 20%;
+    background-color: #292827;
+    border: solid 0.1vh #ffffff;
+    border-radius: 1vh;
+    font-size: 2.5vh;
+    color: #ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.popup:hover{
+    background-color: #4cbfa6;
+}
