@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 2vh;
+    color: #4cbfa6;
+}
+
+body{
+    background-color: #2a2a2a;
+}
+
+.UI{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 30vh;
+    width: 30%;
+    background-color: #1d1d1d;
+    border-radius: 1vh;
+    box-shadow: 0px 0px 0.2vh rgb(0, 0, 0);
+}
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5vh 0.1vh;
+}
+
+.searchBar img{
+    height: 6vh;
+    width: 6vh;
+    background-color: #424141;
+    border-radius: 100%;
+    border: none;
+}
+
+.searchBar input{
+    width: 50%;
+    height: 3vh;
+    border-radius: 5vh;
+    outline: none;
+    border: none;
+    border: 0.3vh solid #ccc;
+    border-radius: 1vh;
+    cursor: pointer;
+    padding: 0.1vh 1vh;
+}
+
+.searchButton{
+    margin-left: 3vh;
+    border: none;
+    background-color: #1d1d1d;
+    cursor: pointer;
+}
+
+.searchButton:hover{
+    opacity: 0.4;
+}
+
+.apiOutput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.exit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 7vh;
+    width: 8vw;
+    top: 91.5%;
+    right: 91%;
+    background-color: #292827;
+    border: solid 0.1vh #ffffff;
+    border-radius: 1vh;
+    font-size: 2.5vh;
+    color: #ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.exit:hover{
+    background-color: #4cbfa6;
+}
