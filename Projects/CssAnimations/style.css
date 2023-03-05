@@ -1,0 +1,354 @@
+*{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+        font-size: 22px;
+}
+
+:root{
+    --g1: rgb(60, 39, 247);
+    --g2: rgb(202, 31, 245);
+}
+
+.page1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: background-animation 10s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--g1),
+        var(--g2),
+        var(--g1)
+    );
+    height: 100vh;
+    background-size: 200%;
+    overflow: hidden;
+}
+
+@keyframes background-animation{
+    from{
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+.parent{
+    position: relative;
+    height: 50vh;
+    width: 50vh;
+    background-color: #1d1d1d;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 1s ease-in-out;
+}
+
+.parent::before{
+    content: ' ';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 50vh;
+    height: 50vh;
+    background:linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: cycling 4s linear infinite forwards ;
+}
+
+.parent::after{
+    content: ' ';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 50vh;
+    height: 50vh;
+    background:linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: cycling 4s linear infinite forwards ;
+    animation-delay: -2s;
+}
+
+.child0{
+    position: absolute;
+    inset: 5px;
+    border-radius: 10px;
+    background: #1d1d1d;
+    z-index: 10;
+}
+
+@keyframes cycling {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.page2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #0f0e0e;
+}
+
+.parent_page2>*{
+    border-radius: 10px;
+}
+
+.child1_page2{
+    position: absolute;
+    background-color: #3a2424;
+    height: 30vh; 
+    width: 20vh;
+    transform: translate(-30%,-50%);
+    transform-origin: bottom right;
+    transition: 1s;
+}
+
+.child2_page2{
+    position: absolute;
+    background-color: #613939;
+    height: 30vh; 
+    width: 20vh;
+    transform: translate(-40%,-50%);
+    transform-origin: bottom right;
+    transition: 1s;
+}
+
+.child3_page2{
+    position: absolute;
+    background-color: #1f0e0e;
+    height: 30vh; 
+    width: 20vh;
+    transform: translate(-50%,-50%);
+    transform-origin: bottom right;
+    transition: 1s;
+}
+
+.child4_page2{
+    position: absolute;
+    background-color: #df9292;
+    height: 30vh; 
+    width: 20vh;
+    transform: translate(-60%,-50%);
+    transform-origin: bottom right;
+    transition: 1s;
+}
+
+.parent_page2:hover> .child1_page2{
+    transform:translate(-12%,-50%) rotate(10deg);
+}
+
+.parent_page2:hover> .child2_page2{
+    transform:translate(-25%,-50%) rotate(5deg);
+}
+
+.parent_page2:hover> .child3_page2{
+    transform:translate(-38%,-50%) rotate(0deg);
+}
+
+.parent_page2:hover> .child4_page2{
+    transform:translate(-53%,-48%) rotate(-5deg);
+}
+
+.page3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #0f0e0e;
+}
+
+.parent_page3{
+    display: flex;
+    height:15vh;
+    width: 20vh;
+    background-color: #0f0e0e;
+    align-items: center;
+}
+
+.parent_page3>*{
+    position: absolute;
+    visibility: visible;
+    height: 3vh;
+    width: 20vh;
+    border-radius: 20px;
+    background:linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    opacity: 1;
+    transition: 0.7s;
+}
+
+.child1_page3{
+    transform: translate(0%,-150%);
+}
+
+.child3_page3{
+    transform: translate(0%,150%);
+}
+
+.parent_page3:hover>.child1_page3{
+    transform: rotate(45deg);
+    background-color: #45f3ff;
+}
+
+ .parent_page3:hover>.child2_page3{
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(448%,-50%);
+}
+
+.parent_page3:hover>.child3_page3{
+    transform: rotate(-45deg);
+    background-color: #45f3ff;
+}
+
+.page4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #1a1a1a;
+}
+
+.parent_page4{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent_page4>*{
+        position: relative;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px #111111;
+        transition: 1s;
+}
+
+.parent_page4>*:hover{
+    transform: scale(1.06);
+}
+
+.parent_page4>*>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 1s;
+}
+
+.parent_page4>*>img:hover{
+    opacity: 1;
+    
+}
+
+.child1_page4{
+    height: 30vh;
+    width: 50vh;
+    left: 5%;
+    top: -25%;
+    background-color: #dd7f7f;
+    
+}
+
+.child2_page4{
+    height: 36vh;
+    width: 36vh;
+    left: 15%;
+    top: -27%;
+    background-color: #5af146;
+}
+
+.child3_page4{
+    height: 50vh;
+    width: 40vh;
+    left: -23%;
+    top: 22%;
+    background-color: #470eaf;
+}
+
+.child4_page4{
+    height: 40vh;
+    width: 35vh;
+    background-color: #d4c81e;
+    left: -8%;
+    top: 26%;
+}
+
+.child5_page4{
+    height: 40vh;
+    width: 35vh;
+    background-color: #671472;
+    left: -0.5%;
+    top: -21%;
+}
+
+.child6_page4{
+    height: 30vh;
+    width: 50vh;
+    background-color: #59e788;
+    left: -8%;
+    top: 22%;
+}
+
+/* .page5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #0f0e0e;
+}
+
+.parent_page5{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child1_page5{
+    height: 38vh;
+    width: 20%;
+    background-image: url("src/weather-app.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+
+.exit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 7vh;
+    width: 8vw;
+    top: 91.5%;
+    right: 91%;
+    background-color: #292827;
+    border: solid 0.1vh #ffffff;
+    border-radius: 1vh;
+    font-size: 2.5vh;
+    color: #ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.exit:hover{
+    background-color: #ffffff;
+    color: #292827;
+}
