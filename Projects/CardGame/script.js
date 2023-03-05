@@ -388,5 +388,5 @@ function scoreFunction(scoreNumber) {
 }
 //EXIT TO HOME
 (_a = document.querySelector('.closeGame')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', (event) => {
-    window.location.href = '/Portfolio/home.html#Projects';
+    window.location.href = '../home.html#Projects';
 });
