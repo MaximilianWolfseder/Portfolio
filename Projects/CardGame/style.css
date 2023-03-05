@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 2vh;
+}
+
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #07070a;
+}
+
+.tile1{
+    position: absolute;
+    left: 10%;
+    top: 1.5%;
+    height: 65vh;
+    width: 80%;
+    background-color: #181818;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.enemyCard{
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 30vh;
+    width: 100%;
+}
+
+.playerCard{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 30vh;
+    width: 100%;
+}
+
+.tile2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    left: 10%;
+    top: 76%;
+    height: 24vh;
+    width: 80%;
+    background-color: #181818;
+    border-radius: 20px;
+
+}
+
+.StartScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 7.5%;
+    top: 10%;
+    height: 80vh;
+    width: 85%;
+    backdrop-filter: blur(5px);
+    border: solid 1px #3b3b3b;
+    border-radius: 5px;
+    visibility: visible;
+    opacity: 1;
+    transition: 2s;
+    color: #fff;
+    transform: scale(0);
+}
+
+span {
+    transition: 0.7s;
+    color: #fff;
+}
+
+.StartButton{
+    height: 10vh;
+    width: 20%;
+    background-color: #07070a;
+    color: #fff;
+    text-decoration: solid;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+}
+
+.StartButton:hover{
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.0);
+}
+
+.ContinueButton{
+    display: none;
+    position: absolute;
+    top: 80%;
+    height: 5vh;
+    width: 20%;
+    background-color: #07070a;
+    color: #fff;
+    text-decoration: solid;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+}
+
+.ContinueButton:hover{
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.07);
+}
+
+.Card{
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 12.5%;
+    height: 28vh;
+    background-color: #4f4f50;
+    border-radius: 10px;
+    margin-left: 0.7vh;
+    margin-right: 0.7vh;
+    margin-bottom: 1.2vh;
+    background-image: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px inset #3b3b3b;
+    transition: all 0.5s ease-out;
+}
+.Card:hover{
+    transform: scale(1.3);
+    margin-bottom: 7vh;
+}
+.Cardenemy{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 12.5%;
+    height: 28vh;
+    background-color: #4f4f50;
+    border-radius: 10px;
+    margin-left: 0.7vh;
+    margin-right: 0.7vh;
+    margin-bottom: 1.2vh;
+    background-image: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px inset #3b3b3b;
+    transition: 0.3s;
+}
+.Stats{
+    display: inline-block;
+    background-color: #3b3b3b;
+    padding: 0.5vh;
+    border-radius: 6px;
+    transform: translate(0%, 16%);
+}
+
+.CardIcon{
+    margin-top: 2.55vh;
+    border-radius: 10px;
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.menuborder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 25vh;
+    height: 25vh;
+    background-color: #292827;
+    border-radius: 10px;
+    margin-bottom: 3.5vh;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.menuborder::before{
+    content: ' ';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 25vh;
+    height: 25vh;
+    
+    background:linear-gradient(0deg, transparent, #ffc505, #ffc505);
+    transform-origin: bottom right;
+    animation: cycling 4s linear infinite forwards ;
+}
+
+.menuborder::after{
+    content: ' ';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 25vh;
+    height: 25vh;
+    background:linear-gradient(0deg, transparent, #ffc505, #ffc505);
+    transform-origin: bottom right;
+    animation: cycling 4s linear infinite forwards ;
+    animation-delay: -2s;
+}
+
+@keyframes cycling {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    inset: 5px;
+    border-radius: 10px;
+    background: #1d1d1d;
+    z-index: 10;
+}
+
+.goldicon{
+    margin: auto;
+    border-radius: 100%;
+    width: 10vh;
+    height: 10vh;
+}
+
+.gold{
+    margin: auto;
+    font-size: 5vh;
+    color: #ffc505;
+}
+
+.fightButton{
+    position: absolute;
+    left: 25.5%;
+    top: 15%;
+    width: 20vh;
+    height: 5vh;
+    background-color: #292827;
+    color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    cursor: pointer;
+    border: solid 1px;
+    transition: 0.5s;
+    font-size: 3vh;
+    opacity: 0;
+}
+
+.fightButton:hover{
+    background-color: #fff;
+    color: #292827;
+}
+
+.shop{
+    position: absolute;
+    left: 25.5%;
+    top: 25%;
+    width: 20vh;
+    height: 5vh;
+    background-color: #292827;
+    color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    cursor: pointer;
+    border: solid 1px;
+    transition: 0.5s;
+    font-size: 3vh;
+    opacity: 0;
+}
+
+.shop:hover{
+    background-color: #fff;
+    color: #292827;
+}
+
+.shopMenu{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 7.5%;
+    top: 30%;
+    height: 40vh;
+    width: 85%;
+    background-color: #000000;
+    border: solid 1px #3b3b3b;
+    border-radius: 5px;
+    transition: 2s;
+    color: #fff;
+    transform: scale(0);
+}
+
+.closeShopButton{
+    height: 10vh;
+    width: 20%;
+    background-color: #07070a;
+    color: #fff;
+    text-decoration: solid;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+    
+    margin-right: 10vh;
+}
+
+.closeShopButton:hover{
+    background-color: #fff;
+    color: #292827;
+}
+
+.highscore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 9.5%;
+    left: 65%;
+    width: 30vh;
+    height: 15vh;
+    background-color: #292827;
+    border-radius: 10px;
+    margin-bottom: 3.5vh;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.score{
+    margin: auto;
+    font-size: 5vh;
+    color: #ffc505;
+}
+
+.closeGame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 7vh;
+    width: 8vw;
+    top: 91.5%;
+    right: 91%;
+    background-color: #292827;
+    border: solid 0.1vh #ffffff;
+    border-radius: 1vh;
+    font-size: 2.5vh;
+    color: #ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.closeGame:hover{
+background-color: #ffffff;
+color: #292827;
+}

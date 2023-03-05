@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardGame</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="board">
+        <div class="tiles">
+            <div class="tile1">
+                <div class="menuborder"><div class="menu"><img src="src/Gold-coin-icon-isolated-on-transparent-background-PNG.png" alt="Gold" class="goldicon"><span class="gold">0</span></div></div>
+                <button class="fightButton" onclick="fightFunction()">FIGHT</button>
+                <button class="shop" onclick="shopFunction()">SHOP</button>
+                
+                    <div class="enemyCard">
+                        
+                    </div>
+                <div class="playerCard"></div>
+            </div>
+            <div class="tile2">
+                <!-- PLAYER HAND <div class="Card"><span class="Stats">600</span></div> -->
+                
+            </div>
+            <div class="shopMenu">
+                <button class="closeShopButton" onclick="closeShopFunction()">CLOSE</button>
+
+            </div>
+            <div class="StartScreen">
+                <button class="StartButton">START GAME</button>
+            </div>
+            <div class="highscore">
+                <span class="score">0</span>
+            </div>
+            <div class="closeGame">Exit</div>
+        </div>
+    </div>
+</body>
+</html>
