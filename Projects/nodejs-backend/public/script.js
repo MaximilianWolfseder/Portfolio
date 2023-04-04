@@ -23,8 +23,8 @@ async function getData() {
         'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-        username: 'Junge',
-        password: 'Junge1234'
+        username: 'Example',
+        password: '1234'
         })
     });
 */
