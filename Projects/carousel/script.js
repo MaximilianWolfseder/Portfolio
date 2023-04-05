@@ -32,19 +32,3 @@ arrowbuttons.forEach((button =>{
         }
     })
 }))
-
-/*
-console.log(buttons)
-buttons.forEach(function (button) {
-    
-    button.addEventListener("click", function () {
-        
-        var currentState = button.getAttribute("data-state");
-        if (currentState === "false") {
-            button.setAttribute("data-state", "true");
-        }
-        else {
-            button.setAttribute("data-state", "false");
-        }
-    });
-});*/
