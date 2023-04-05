@@ -5,9 +5,8 @@ const buttons = document.querySelectorAll(".heroButton");
 arrowbuttons.forEach((button =>{
     button.addEventListener("click", (event) => {
         const state = button.getAttribute('data-state')
-        if (state === 'previous') {
+        if (state === 'next') {
             buttons.forEach((insideButton) => {
-                console.log("hello")
                 const index = insideButton.getAttribute("data-index")
                 let i = parseInt(index)
                 if (index === '3') {
